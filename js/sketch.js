@@ -69,7 +69,7 @@ function download() {
 // Set up (elements only drawn once)
 function setup() {
   // Get window size 
-  let windowWidth = window.innerWidth - 300;
+  let windowWidth = window.innerWidth - 270;
   let windowHeight = window.innerHeight - 180;
 
   // Container for everything
