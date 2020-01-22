@@ -1,10 +1,10 @@
 
 // Write a function to create a slider
-function makeSlider(label, min = 0, max = 50, value = 10, step = 1, parent = createDiv(), update = () => {}) {
+function makeSlider(label, minVal = 0, maxVal = 50, value = 10, step = 1, parent = createDiv(), update = () => {}) {
     let wrapper = createDiv(label);
     wrapper.parent(parent);
     wrapper.class("slider");
-    let slider = createSlider(min, max, value, step);
+    let slider = createSlider(minVal, maxVal, value, step);
     slider.input(update); // function to do on update
     slider.class("form-control-range")
     slider.parent(wrapper);

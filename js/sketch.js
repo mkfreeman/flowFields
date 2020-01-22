@@ -16,13 +16,13 @@ function makeControls() {
   let controlWrapper = createDiv().id("control-wrapper");
   let controlHeader = createDiv("<h2>Controls</h2>");
   controlHeader.parent(controlWrapper);
-  nrowSlider = makeSlider("Vertical Anchors", min = 2, max = 50, value = 30, step = 1, parent = controlWrapper, clearContent);
-  ncolSlider = makeSlider("Horizontal Anchors", min = 2, max = 50, value = 30, step = 1, parent = controlWrapper, clearContent);
-  xIncrementSlider = makeSlider("Horizontal Smoothness", min = .0001, max = .3, value = .05, step = .0001, parent = controlWrapper, clearContent);
-  yIncrementSlider = makeSlider("Vertical Smoothness", min = .0001, max = .3, value = .05, step = .0001, parent = controlWrapper, clearContent);
-  zIncrementSlider = makeSlider("Fluctuations in Forces", min = 0, max = .3, value = .01, step = .0001, parent = controlWrapper, clearContent);
-  particleSlider = makeSlider("Number of Particles", min = 10, max = 10000, value = 500, step = 10, parent = controlWrapper, clearContent);
-  opacitySlider = makeSlider("Line Opacity", min = 0, max = 1, value = .1, step = .01, parent = controlWrapper);
+  nrowSlider = makeSlider("Vertical Anchors", minVal = 2, maxVal = 50, value = 30, step = 1, parent = controlWrapper, clearContent);
+  ncolSlider = makeSlider("Horizontal Anchors", minVal = 2, maxVal = 50, value = 30, step = 1, parent = controlWrapper, clearContent);
+  xIncrementSlider = makeSlider("Horizontal Smoothness", minVal = .0001, maxVal = .3, value = .05, step = .0001, parent = controlWrapper, clearContent);
+  yIncrementSlider = makeSlider("Vertical Smoothness", minVal = .0001, maxVal = .3, value = .05, step = .0001, parent = controlWrapper, clearContent);
+  zIncrementSlider = makeSlider("Fluctuations in Forces", minVal = 0, maxVal = .3, value = .01, step = .0001, parent = controlWrapper, clearContent);
+  particleSlider = makeSlider("Number of Particles", minVal = 10, maxVal = 10000, value = 500, step = 10, parent = controlWrapper, clearContent);
+  opacitySlider = makeSlider("Line Opacity", minVal = 0, maxVal = 1, value = .1, step = .01, parent = controlWrapper);
   strokeColorPicker = makeColorPicker("Line Color", startColor = "rgb(216, 60, 95)", parent = controlWrapper);
   backgroundColorPicker = makeColorPicker("Background Color", startColor = "white", parent = controlWrapper, (d) => background(d));
 
