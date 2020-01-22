@@ -10,6 +10,10 @@ input {
     display: inline-block;
 }
 
+.button-wrapper:first-of-type {
+    margin-top:5px;
+}
+
 #control-wrapper {
     float: left;
     max-width:200px;

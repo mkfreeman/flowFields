@@ -17,6 +17,10 @@ header h1 {
     margin-bottom: 0; 
 }
 
+h2 {
+    font-weight:100;
+}
+
 .p5_canvas {
     border: 1px solid #d3d3d3;
     margin: 20px;
