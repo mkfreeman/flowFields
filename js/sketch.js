@@ -21,6 +21,8 @@ let flowfield = [];
 function makeControls() {
   // Controls 
   controlWrapper = createDiv().id("control-wrapper");
+  controlHeader = createDiv("<h2>Controls</h2>");
+  controlHeader.parent(controlWrapper);
   nrowSlider = makeSlider("Vertical Anchors", min = 2, max = 50, value = 30, step = 1, parent = controlWrapper, clearContent);
   ncolSlider = makeSlider("Horizontal Anchors", min = 2, max = 50, value = 30, step = 1, parent = controlWrapper, clearContent);
   xIncrementSlider = makeSlider("Horizontal Smoothness", min = .0001, max = .3, value = .05, step = .0001, parent = controlWrapper, clearContent);
@@ -36,6 +38,8 @@ function makeControls() {
   makeButton("Resume", controlWrapper, loop);
   makeButton("Clear&nbsp;&nbsp;", controlWrapper, clearContent);
   makeButton("Download", controlWrapper, download);
+  makeButton("About", controlWrapper, () => {}, "modal");
+  makeButton("GitHub", controlWrapper, () => {window.open("https://github.com/mkfreeman/flowFields", "_blank");});
   return controlWrapper;
 }
 

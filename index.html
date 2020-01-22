@@ -6,22 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FlowFields</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
     <script src="js/controls.js"></script>
     <script src="js/particle.js"></script>
     <script src="js/sketch.js"></script>
     <link href="css/main.css" rel="stylesheet" />
+    <link href="css/controls.css" rel="stylesheet" />
 </head>
 
 <body>
     <header>
         <nav>
             <h1>Flow Fields</h1>
-            <p><em>A Generative Art Tool</em><a>&nbsp;(about)</a></p>
+            <p><em>A Generative Art Tool</em></p>
         </nav>
     </header>
     <main>
-
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">About</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        This project uses a particle simulation to visualize a field of directional vectors. It uses <a href = "https://en.wikipedia.org/wiki/Perlin_noise" target = "_blank">Perlin Noise</a> to construct a field of random (but related) forces in horizontal and vertical directions (that change over time). It is heavily based on this <a target = "_blank"href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD" >tutorial series</a> and the corresponding <a target = "_blank" href ="https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_024_PerlinNoiseFlowField/P5">code</a>.<br/><br/>
+                        Source code and additional information are available <a href="https://github.com/mkfreeman/flowFields" target="_blank">on GitHub</a>.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-copyright">

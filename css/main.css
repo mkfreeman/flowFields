@@ -1,25 +1,20 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
-header h1 {
-    font-weight: 100;
-    font-size: 2.5em;
-    margin-bottom: 0;
-    
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;    
 }
 
-.slider, .color-picker{
-    color:#898787;
-}
-header {
-    /* border-bottom:1px solid red; */
+header h1, header p {
     background-color:rgb(216, 60, 95);
     color:white;
     padding-left:20px;
 }
 
-body {
-    font-family: sans-serif;
-    box-sizing: border-box;    
+header h1 {
+    font-weight: 100;
+    font-size: 2.5em;
+    margin-bottom: 0; 
 }
 
 .p5_canvas {
@@ -27,29 +22,11 @@ body {
     margin: 20px;
 }
 
-input {
-    cursor: pointer;
-}
-.button-wrapper {
-    display: inline-block;
-}
-
-#control-wrapper {
-float: left;
-max-width:200px;
-}
-
-button.btn {
-    width: 95px;
-    padding: 5px;
-    margin: 2px;
-    background-color:rgb(232, 138, 159);
-    cursor:pointer;
-}
 .container {
-    /* width:100%; */
     max-width: inherit;
 }
+
+
 /* Footer */
 footer {
     width: 100%;

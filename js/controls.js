@@ -12,11 +12,15 @@ function makeSlider(label, min = 0, max = 50, value = 10, step = 1, parent = cre
   }
   
   // Function to make a button
-  function makeButton(text, parent, callback) {
+  function makeButton(text, parent, callback, type = "not_modal") {
     let buttonWrapper = createDiv();
     buttonWrapper.class("button-wrapper");
     let button = createButton(text);
     button.class("btn")
+    if(type === "modal") {
+        button.attribute("data-toggle", "modal")
+        button.attribute("data-target", "#exampleModal")
+    }
     button.parent(buttonWrapper)
     buttonWrapper.parent(parent);
     button.mousePressed(callback);

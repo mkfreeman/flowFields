@@ -1,0 +1,28 @@
+/* Control styles */
+.slider, .color-picker{
+    color:#898787;
+}
+
+input {
+    cursor: pointer;
+}
+.button-wrapper {
+    display: inline-block;
+}
+
+#control-wrapper {
+    float: left;
+    max-width:200px;
+}
+
+button.btn {
+    width: 95px;
+    padding: 5px;
+    margin: 2px;
+    background-color:rgb(232, 138, 159);
+    cursor:pointer;
+}
+
+#control-wrapper a {
+    color:inherit;
+}
