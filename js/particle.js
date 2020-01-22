@@ -4,7 +4,7 @@
 // Code for: https://youtu.be/BjoM9oKOAKY
 
 function Particle() {
-    this.pos = createVector(random(SIZE), random(SIZE));
+    this.pos = createVector(random(width), random(height));
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
     this.maxspeed = 2;
@@ -52,8 +52,8 @@ function Particle() {
     };
 
     this.edges = function () {
-        if (this.pos.x > SIZE | this.pos.x < 0 | this.pos.y > SIZE | this.pos.y < 0) {
-            this.pos = createVector(random(SIZE), random(SIZE));
+        if (this.pos.x > width | this.pos.x < 0 | this.pos.y > height | this.pos.y < 0) {
+            this.pos = createVector(random(width), random(height));
             this.updatePrev();
         }
     };

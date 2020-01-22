@@ -1,22 +1,71 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
+header h1 {
+    font-weight: 100;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    
+}
+
+.slider, .color-picker{
+    color:#898787;
+}
+header {
+    /* border-bottom:1px solid red; */
+    background-color:rgb(216, 60, 95);
+    color:white;
+    padding-left:20px;
+}
+
 body {
     font-family: sans-serif;
-    padding:20px;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 .p5_canvas {
-    border:1px solid #d3d3d3;
-    margin:20px;
+    border: 1px solid #d3d3d3;
+    margin: 20px;
 }
 
 input {
-    cursor:pointer;
+    cursor: pointer;
+}
+.button-wrapper {
+    display: inline-block;
 }
 
-button {
-    width:100px;
-    padding:5px;
-    margin:2px;
+#control-wrapper {
+float: left;
+max-width:200px;
+}
+
+button.btn {
+    width: 95px;
+    padding: 5px;
+    margin: 2px;
+    background-color:rgb(232, 138, 159);
+    cursor:pointer;
+}
+.container {
+    /* width:100%; */
+    max-width: inherit;
+}
+/* Footer */
+footer {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    z-index: 9999;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgb(216, 60, 95);
+    margin-top: 10px;
+    padding: 5px;
+    opacity: .5;
+}
+
+.right {
+    float: right;
 }
