@@ -10,10 +10,6 @@ input {
     display: inline-block;
 }
 
-/* .button-wrapper{
-    margin-top:100px !important;
-    color:blue;
-} */
 
 div.color-picker {
     margin-bottom:4px;
@@ -22,6 +18,8 @@ div.color-picker {
 #control-wrapper {
     float: left;
     max-width:200px;
+    max-height:calc(100vh - 200px);
+    overflow-y:scroll;  
 }
 
 button.btn {
