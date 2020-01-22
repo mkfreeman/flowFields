@@ -3,12 +3,11 @@
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/BjoM9oKOAKY
 
-function Particle() {
+function Particle(cellWidth = 400, cellHeight = 400) {
     this.pos = createVector(random(width), random(height));
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
     this.maxspeed = 2;
-    this.h = 0;
 
     this.prevPos = this.pos.copy();
 
@@ -20,8 +19,8 @@ function Particle() {
     };
 
     this.follow = function (vectors) {
-        var x = floor(this.pos.x / rectWidth);
-        var y = floor(this.pos.y / rectHeight);
+        var x = floor(this.pos.x / cellWidth);
+        var y = floor(this.pos.y / cellHeight);
         var index = x + y * ncol;        
         var force = vectors[index];        
         this.applyForce(force);
@@ -38,7 +37,6 @@ function Particle() {
         return(color);
     }
     this.show = function () {        
-        // stroke(this.h, 0, 0, 25);        
         stroke(this.getColor());
         
         strokeWeight(.3);

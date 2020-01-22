@@ -10,8 +10,13 @@ input {
     display: inline-block;
 }
 
-.button-wrapper:first-of-type {
-    margin-top:5px;
+/* .button-wrapper{
+    margin-top:100px !important;
+    color:blue;
+} */
+
+div.color-picker {
+    margin-bottom:4px;
 }
 
 #control-wrapper {
