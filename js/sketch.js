@@ -8,6 +8,7 @@ let yoff = 0;
 let zoff = 0;
 let particles = [];
 let flowfield = [];
+let canvas;
 let nrow, ncol, rectWidth, rectHeight;
 let xIncrementSlider, yIncrementSlider, zIncrementSlider, particleSlider, opacitySlider, strokeColorPicker, backgroundColorPicker;
 
@@ -24,7 +25,7 @@ function makeControls() {
   particleSlider = makeSlider("Number of Particles", minVal = 10, maxVal = 10000, value = 500, step = 10, parent = controlWrapper, clearContent);
   opacitySlider = makeSlider("Line Opacity", minVal = 0, maxVal = 1, value = .1, step = .01, parent = controlWrapper);
   strokeColorPicker = makeColorPicker("Line Color", startColor = "rgb(216, 60, 95)", parent = controlWrapper);
-  backgroundColorPicker = makeColorPicker("Background Color", startColor = "white", parent = controlWrapper, (d) => background(d));
+  backgroundColorPicker = makeColorPicker("Background Color", startColor = "white", parent = controlWrapper, (d) => setBackgroundColor(d));
 
   // Buttons
   makeButton("Pause", controlWrapper, noLoop);
@@ -38,6 +39,11 @@ function makeControls() {
   return controlWrapper;
 }
 
+// Function to set background color
+function setBackgroundColor() {
+  // Avoids clearing the content
+  canvas.style("background-color", backgroundColorPicker.value())
+}
 // Create particles
 function createEmptyParticles() {
   particles = [];
@@ -48,10 +54,9 @@ function createEmptyParticles() {
 
 // Clear content
 function clearContent() {
-  clear();
+  clear();  
   createEmptyParticles();
-  flowfield = [];
-  background(backgroundColorPicker.value());
+  flowfield = [];  
   xoff = X_START = random(100);
   yoff = random(100);
   zoff = random(100);
@@ -79,14 +84,12 @@ function setup() {
   let controls = makeControls();
   controls.parent(container);
   let canvasContainer = createDiv();
-  let canvas = createCanvas(windowWidth, windowHeight).class("p5_canvas");
+  canvas = createCanvas(windowWidth, windowHeight).class("p5_canvas");
   canvasContainer.parent(container);
   canvas.parent(canvasContainer);
 
   // Set color mode to RGB percentages  
   colorMode(RGB, 100);
-
-  background(backgroundColorPicker.value());
   
   // Create set of particles
   getSize();
@@ -101,8 +104,8 @@ function getSize() {
   rectHeight = height / nrow;
 }
 
-function draw() {
-  getSize();
+function draw() {  
+  getSize();  
   // Iterate through grid and set vector forces
   for (let row = 0; row < nrow; row++) {
     for (let col = 0; col < ncol; col++) {
